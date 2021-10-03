@@ -1,18 +1,26 @@
+  <!-- index.ejs - Irits Anna Mathew - 3011145346 - 03-10-2021-->
+ 
+ <!-- This is  ejs template for home page -->
+ 
+ 
  <%include partials/header.ejs%>
  <%include partials/top_nav_bar.ejs%>
 
-  <!-- Main Content-->
+  <!-- Main Content is displayed using container-fluid -->
   <main>
   <div class ="container-fluid">
   <br><br>
+  <!-- Displaying the welcome message -->
+
     <h1 class="display-8"> Welcome to the My Express Portfolio </h1>
     <br><br>
     <br>
   </div>
   <br><br>
+  <!-- Displaying Mission Statement  -->
    <div class ="container" style="background-color:aquamarine">
     <p><br> 
-    <h5 > <b>"Committment to process leads to progress".</b><br></h5>
+    <h5 > <b>"Committment to Process leads to Progress".</b><br></h5>
     <p><h6> These wise words from the renowned book 'Atomic Habits' is the one that resonates deep within my heart, and it has been these words that has fueled my quest for excellence. 
     To me, excellence is not about being better than everyone else,rather, it is about giving the very best effort you could give. The road to success is herculean indeed, but each time we fall, the feeling of wanting to get back up and perservere is what drives us to success.
     </h6>
@@ -25,7 +33,9 @@
   </p> 
   </div>
   <br>
+  <!-- Link to About Page -->
   <h4 style ="text-align:end"> <a  href="<%= next %>" role="button" class="btn btn-link"><b>Next-></b> </a></h4>
+  
   </main>
   
   <%include partials/bottom_nav_bar.ejs%>

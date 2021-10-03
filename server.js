@@ -5,7 +5,7 @@
  */
 
 var app = require('./app');
-var debug = require('debug')('week3:server');
+var debug = require('debug')('myportfolio:server');
 var http = require('http');
 
 /**

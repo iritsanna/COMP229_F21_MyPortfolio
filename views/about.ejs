@@ -1,10 +1,16 @@
+ <!-- about.ejs - Irits Anna Mathew - 3011145346 - 03-10-2021-->
+ 
+ <!-- This is  ejs template for about page -->
+
 <%include partials/header.ejs%>
 <%include partials/top_nav_bar.ejs%>
 
+<!-- Main Content is being displayed on the page using a container component-->
+<!--  The content includes an image, short description, link to resume-->
 <main>
   <div class ="container">
-  <br> <br> <br>     <br>
-   <img src="photo.png" style="border-color: saddlebrown;border-style: double;border-radius :20px;"></p>
+  <br> <br> <br><br>
+   <img src="photo.png" style="border-color: saddlebrown;border-style: double;border-radius :20px;">
     
     <h4>Irits Anna Mathew </h4>    
     <p><h6>I’m from India. I hold a Bachelor’s Degree in Computer Science and Engineering. 
@@ -12,11 +18,11 @@
     I got the opportunity to learn and work with several technologies like business language SAP ABAP, SAP MDG, SAP Information Steward, Python and SQL.
      I worked on several projects for a leading Automobile Giant and a major Food Manufacturing client.</h6></p>
  
-            <h5><a  href="<%= link %>" class="btn btn-secondary" role="button"><b>RESUME</b></a></h5> 
+      <h5><a  href="<%= link %>" class="btn btn-secondary" role="button"><b>RESUME</b></a></h5> 
       <br>
            
-      </div>
-      
-</main>
+    </div>
+ </main>
 
  <%include partials/bottom_nav_bar.ejs%>  
+ <%include partials/footer.ejs%>

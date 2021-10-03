@@ -1,7 +1,9 @@
+
 {
   "name": "comp229f21",
   "version": "0.0.1",
   "private": true,
+  "author": "Irits Anna Mathew",
   "scripts": {
     "start": "node ./server.js"
   },

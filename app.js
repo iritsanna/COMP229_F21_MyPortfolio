@@ -1,4 +1,8 @@
+// app.js - Irits Anna Mathew - 3011145346 - 03-10-2021
+
 // installed 3rd party packages
+// Below are the dependencies specified in package-json file
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -8,9 +12,10 @@ let logger = require('morgan');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
+// creating an express application
 let app = express();
 
-// view engine setup
+// specifying the path of views and view engine to be setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
