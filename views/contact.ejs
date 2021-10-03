@@ -1,0 +1,38 @@
+<%include partials/header.ejs%>
+<%include partials/top_nav_bar.ejs%>
+
+<!-- Main Content on Contact Page-->
+<main>
+
+  <div class= "card-group" style="margin-top: 10rem ;margin-left: 20rem;font-family: Georgia, 'Times New Roman', Times, serif; font: size 14px;width: 60rem;border:black; ">
+  
+  <div class="card text-dark bg-light mb-3" >
+    <div class="card-header"style="font-family: Georgia, 'Times New Roman', Times, serif; font: size 14px;background-color:lightseagreen;"><b>My Contact Details</b></div>
+    <div class="card-body" style="background-color:powderblue">
+    <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">
+      Name: Irits Anna Mathew
+      <br>Email: iritsannamathew@gmail.com<br>Address: Toronto, Canada<br></p>
+  </div>  
+  </div>
+   
+  <div class="card text-dark bg-light mb-3 " >
+    <div class="card-header"style="font-family: Georgia, 'Times New Roman', Times, serif; font: size 14px;background-color: palegreen;"><b>Please Provide Your Contact Details</b></div> 
+    <div class="card-body ">
+    <p> <label for="firstName" class="form-label">First Name</label>
+    <input type="fname" class="form-control" id="firstName">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="lname" class="form-control" id="lastName">
+    <label for="email" class="form-label">Email Address</label>
+    <input type="email" class="form-control" id="email">
+    <label for="message" class="form-label">Your Message</label>
+    <textarea class="form-control" id="message" rows="3"></textarea>
+    <br>
+    <a href="<%= next %>" class="btn btn-primary" role="button"><b>Submit</b></a></p>
+  </div>
+  </div> 
+  </div>
+
+</main>
+  
+<%include partials/bottom_nav_bar.ejs%>
+<%include partials/footer.ejs%>

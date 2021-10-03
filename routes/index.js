@@ -14,23 +14,24 @@ router.get('/home', function(req, res, next) {
 
 /* GET About Us page. */
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About', link: "Resume.pdf"});
+  res.render('about', { title: 'About', link: "Resume.pdf",});
 
 });
-
+/*
 /* GET Projects page. */
 router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects'});
+  res.render('projects', { title: 'Projects',next:'services'});
 });
 
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services'});
+  res.render('services', { title: 'Services',next:'contact'});
 });
+
 
 /* GET Contact Us page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact'});
+  res.render('contact', { title: 'Contact',next:'home'});
   
 });
 
