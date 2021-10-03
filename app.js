@@ -17,7 +17,7 @@ let app = express();
 
 // specifying the path of views and view engine to be setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');// express -e 
 
 app.use(logger('dev'));
 app.use(express.json());
