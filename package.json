@@ -21,18 +21,6 @@
     "jquery": "^3.6.0",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  },
-  "description": "express porfolio assignment1",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iritsanna/COMP229F21_MyPortfolio.git"
-  },
-  "author": "Irits Anna Mathew",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iritsanna/COMP229F21_MyPortfolio/issues"
-  },
-  "homepage": "https://github.com/iritsanna/COMP229F21_MyPortfolio#readme"
-}
+
+  }}
+ 
