@@ -1,7 +1,7 @@
 {
   "name": "comp229f21",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "author": "Irits Anna Mathew",
   "scripts": {
     "start": "node ./server.js"
@@ -36,6 +36,7 @@
     "@types/express-session": "^1.17.4",
     "@types/passport": "^1.0.7",
     "@types/passport-local": "^1.0.34",
-    "@types/passport-local-mongoose": "^6.1.0"
+    "@types/passport-local-mongoose": "^6.1.0",
+    "ws": "3.3.2"
   }
 }

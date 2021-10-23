@@ -2,8 +2,6 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-let jwt = require('jsonwebtoken');
-
 // create a reference to the model
 let Bcontact = require('../models/bcontact');
 
@@ -18,9 +16,9 @@ module.exports.displayBcontactList = (req, res, next) => {
             res.render('bcontact/list', 
             {title: 'Business Contacts', 
             BcontactList: bcontactList, 
-            displayName: req.user ? req.user.displayName : ''});      
+                        displayName: req.user ? req.user.displayName : ''});      
         }
-    });
+    }).sort({"name":1});
 }
 
 module.exports.displayAddPage = (req, res, next) => {
@@ -84,10 +82,28 @@ module.exports.processEditPage = (req, res, next) => {
             console.log(err);
             res.end(err);
         }
-        else
+       else 
         {
             // refresh the bcontact list
             res.redirect('/bcontact-list');
+        }
+    });
+
+}
+
+module.exports.performDirectDelete = (req, res, next) => {
+    let id = req.params.id;
+
+    Bcontact.remove({_id: new ObjectId(id)}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+             // refresh the bcontact list
+             res.redirect('/bcontact-list');
         }
     });
 }
