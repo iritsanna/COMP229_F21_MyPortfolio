@@ -1,3 +1,5 @@
+// bcontact.js - Irits Anna Mathew - 301145346 - 23-10-2021
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -88,24 +90,7 @@ module.exports.processEditPage = (req, res, next) => {
             res.redirect('/bcontact-list');
         }
     });
-
-}
-
-module.exports.performDirectDelete = (req, res, next) => {
-    let id = req.params.id;
-
-    Bcontact.remove({_id: new ObjectId(id)}, (err) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else
-        {
-             // refresh the bcontact list
-             res.redirect('/bcontact-list');
-        }
-    });
+    
 }
 
 module.exports.performDelete = (req, res, next) => {

@@ -1,3 +1,4 @@
+// user.js - Irits Anna Mathew - 301145346 - 23-10-2021
 // require modules for the User Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');

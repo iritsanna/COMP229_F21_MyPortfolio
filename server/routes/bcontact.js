@@ -1,3 +1,4 @@
+// bcontact.js - Irits Anna Mathew - 301145346 - 23-10-2021
 let express = require('express');
 let router = express.Router();
 
@@ -33,8 +34,6 @@ router.post('/edit/:id', requireAuth, bcontactController.processEditPage);
 /* GET Route for displaying the Edit page - UPDATE Operation */
 router.get('/edit/:id', requireAuth, bcontactController.displayEditPage);
 
-/* GET to perform  Deletion - DELETE Operation */
-router.get('/directdelete/:id', requireAuth, bcontactController.performDirectDelete);
 /* POST to perform  Deletion - DELETE Operation */
 router.get('/delete/:id', requireAuth, bcontactController.performDelete);
 
