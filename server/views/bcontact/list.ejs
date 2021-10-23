@@ -1,5 +1,5 @@
+<!-- list.ejs - Irits Anna Mathew - 301145346 - 23-10-2021-->
 <%- include ../partials/header.ejs %>
-
 <%- include ../partials/top_nav_bar.ejs %>
   
 
@@ -8,12 +8,13 @@
     <div class="row">
         <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
-
+            
             <% if(typeof displayName == 'string' && displayName) { %>
                 <a href="/bcontact-list/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle" style ="text-align:left"></i> Add a Business contact</a>
             <% } %>
-            <br>
+            <br> 
+
             <table class="table table-bordered table-striped table-hover" style ="border-color: black;">
                 <!-- Header Row-->
                 <tr class="d-flex">

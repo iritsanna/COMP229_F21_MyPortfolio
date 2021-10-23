@@ -3,6 +3,7 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
+let jwt = require('jsonwebtoken');
 
 // create a reference to the model
 let Bcontact = require('../models/bcontact');
@@ -18,7 +19,7 @@ module.exports.displayBcontactList = (req, res, next) => {
             res.render('bcontact/list', 
             {title: 'Business Contacts', 
             BcontactList: bcontactList, 
-                        displayName: req.user ? req.user.displayName : ''});      
+            displayName: req.user ? req.user.displayName : ''});      
         }
     }).sort({"name":1});
 }
@@ -53,7 +54,7 @@ module.exports.processAddPage = (req, res, next) => {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Bcontact.findById(id, (err, bcontactToEdit) => {
+    Bcontact.findById( id, (err, bcontactToEdit) => {
         if(err)
         {
             console.log(err);

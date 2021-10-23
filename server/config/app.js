@@ -8,7 +8,7 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-
+let cors = require('cors');
 
 // modules for authentication
 let session = require('express-session');

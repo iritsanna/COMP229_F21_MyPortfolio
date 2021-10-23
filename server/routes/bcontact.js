@@ -3,6 +3,7 @@ let express = require('express');
 let router = express.Router();
 
 let mongoose = require('mongoose');
+let jwt = require('jsonwebtoken');
 
 let passport = require('passport');
 
@@ -22,17 +23,21 @@ function requireAuth(req, res, next)
 /* GET Route for the Business Contact List page - READ Operation */
 router.get('/', bcontactController.displayBcontactList);
 
-/* POST Route for processing the Add page - CREATE Operation */
-router.post('/add', requireAuth, bcontactController.processAddPage);
+/* GET Route for the Business Contact List page - READ Operation */
+router.get('/bcontact-list', bcontactController.displayBcontactList);
+
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get('/add', requireAuth, bcontactController.displayAddPage);
 
-/* POST Route for processing the Edit page - UPDATE Operation */
-router.post('/edit/:id', requireAuth, bcontactController.processEditPage);
+/* POST Route for processing the Add page - CREATE Operation */
+router.post('/add', requireAuth, bcontactController.processAddPage);
 
 /* GET Route for displaying the Edit page - UPDATE Operation */
 router.get('/edit/:id', requireAuth, bcontactController.displayEditPage);
+
+/* POST Route for processing the Edit page - UPDATE Operation */
+router.post('/edit/:id', requireAuth, bcontactController.processEditPage);
 
 /* POST to perform  Deletion - DELETE Operation */
 router.get('/delete/:id', requireAuth, bcontactController.performDelete);

@@ -5,7 +5,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-
+let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
 
 // create the User Model instance
@@ -69,7 +69,6 @@ module.exports.processLoginPage = (req, res, next) => {
             {
                 return next(err);
             }
-
           
             return res.redirect('/bcontact-list');
         });
