@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/top_nav_bar.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container"  style="margin-top: 8rem ;margin-left: 5rem;">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <h1><%= title %></h1>
+
+            <% if(typeof displayName == 'string' && displayName) { %>
+                <a href="/bcontact-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle" style ="text-align:left"></i> Add a Business contact</a>
+            <% } %>
+            <br>
+            <table class="table table-bordered table-striped table-hover" style ="border-color: black;">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                        <th class="text-center col-2">Contact Name</th>
+                        <th class="text-center col-4">Contact Number</th>
+                        <th class="text-center col-6">Email Address</th>
+                        
+                    <% } else { %>
+                        <th class="text-center col-2"> Contact Name </th>
+                        <th class="text-center col-4"> Contact Number </th>
+                        <th class="text-center col-6"> Email Address </th>
+                    <% } %>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BcontactList.length; count++) { %>
+                    <tr class="d-flex">
+                        <% if(typeof displayName == 'string' && displayName) { %>
+                            <td class="text-center col-2"><%= BcontactList[count].name %></td>
+                            <td class="text-center col-4"><%= BcontactList[count].phone %></td>
+                            <td class="text-center col-6"><%= BcontactList[count].email %></td>
+                             <td class="text-center col-1">
+                                <a href="/bcontact-list/edit/<%= BcontactList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Update</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/bcontact-list/delete/<%= BcontactList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                         <% } else { %>
+                            <td class="text-center col-2"><%= BcontactList[count].name %></td>
+                            <td class="text-center col-4"><%= BcontactList[count].phone %></td>
+                            <td class="text-center col-6"><%= BcontactList[count].email %></td>
+                         <% } %>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+<%- include ../partials/bottom_nav_bar.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
+
+
+
+
+
