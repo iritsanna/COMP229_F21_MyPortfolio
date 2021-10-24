@@ -1,6 +1,6 @@
  <!-- top_nav_bar.ejs - Irits Anna Mathew - 301145346 - 03-10-2021-->
  
- <!-- This partial is included in ejs template of all 5 pages -->
+ <!-- This partial is included in ejs template of all pages -->
 
  <!-- Top Navigation Bar-->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color:darkcyan">
@@ -15,7 +15,7 @@
         <a class="nav-link" href="/contact"><i class="fas fa-phone"></i>    Contact</a>
         
         <% if(typeof displayName == 'string' && displayName) { %>
-          <a class="navbar-text"><i class="fas fa-lg fa-user"></i>    Welcome   <%= displayName %></a>
+          <a class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome <%= displayName %></a>
           <a class ="nav-link" href="/logout"><i class="fas fa-lg fa-sign-out-alt"></i>  Logout</a>
         <% } else { %>
           <a class ="nav-link" href="/login"><i class="fas fa-lg fa-sign-in-alt"></i>  Login</a>
